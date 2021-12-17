@@ -16,16 +16,16 @@ if (isset($_POST['signup'])) {
       $number_of_rows = $result->fetchColumn(); 
       if ($number_of_rows > 0) {
         $info = '<div class="alert alert-danger" role="alert">
-        Email already exist!</div>';
+        email existe déjà!</div>';
       } else {
-        $query= "INSERT INTO `customers`(`name`,`surname`,`email`,`pass`,`city`,`address`,`telephone`) VALUES (?,?,?,?,?,?,?)";
+        $query= "INSERT INTO `customsers`(`name`,`surname`,`email`,`pass`,`city`,`address`,`telephone`) VALUES (?,?,?,?,?,?,?)";
         $check = $pdo->prepare($query)->execute([$name, $surname, $email, $pass, $city, $address, $telephone]);
         if ($check) {
           $info = '<div class="alert alert-success" role="alert">
-          Regristered Succesfully!!</div>';
+          inscription réussie!!</div>';
         } else {
           $info = '<div class="alert alert-danger" role="alert">
-          An error occured please try again!!</div>';
+          Une erreur sest produite, veuillez réessayer!!</div>';
         }	
       }
       

@@ -25,7 +25,7 @@ if (isset($_REQUEST['q'])) {
         } while ($row = $stmt->fetch());
     }else{
     $info = '<div class="alert alert-danger" role="alert">
-    No Products Present!</div>';
+    Aucun produit présent !!</div>';
     }
 }else{
     header('location:index.php');

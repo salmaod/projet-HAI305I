@@ -24,7 +24,7 @@ if (!empty($row['idProduct'])) {
   }while ($row = $stmt->fetch());
 }else{
   $show = '<div class="alert alert-danger" role="alert">
-  No Products Present!</div>';
+  Aucun produit présent !</div>';
 }
 ?>
 <!doctype html>
